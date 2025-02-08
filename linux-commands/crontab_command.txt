@@ -1,0 +1,18 @@
+In Linux, cron is time-based job scheduling daemon that allow you to run the command or script at specific intervals automaticlly.
+There is file called crontab,in which we can mention the time interval and command to execute.
+Each user have the their own crontab.
+
+syntax:
+
+* * * * * command_to_be_executed
+┬ ┬ ┬ ┬ ┬
+│ │ │ │ │
+│ │ │ │ └───── Day of the week (0 - 7) (Sunday is both 0 and 7)
+│ │ │ └────────── Month (1 - 12)
+│ │ └─────────────── Day of the month (1 - 31)
+│ └──────────────────── Hour (0 - 23)
+└───────────────────────── Minute (0 - 59) 
+
+Example:
+
+

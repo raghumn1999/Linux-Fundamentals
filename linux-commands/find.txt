@@ -1,0 +1,25 @@
+find command --> is used search for the file and directories in given path
+
+syntax:
+find path_to_search options
+
+options --> i used 
+
+-name  --> mention pattern to seach
+
+-type --> mentioning type for searching
+
+-mindepth --> from which directory,search will need start from path_to_search directory
+
+-maxdepth --> max
+
+-path
+
+-exec
+
+-prune
+
+-print
+
+-o  --> OR operation
+

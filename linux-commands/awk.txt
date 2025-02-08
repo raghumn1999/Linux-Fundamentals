@@ -1,0 +1,34 @@
+
+awk is text processing linux command, the data given to std-in of it.
+we can pass data to std-in of awk,awk will process and gives output.
+
+Usage1: NR , {print $1,$2} , and default filed seperator is space(' ') -F
+
+$ ls -la --> will give output as below and first three lines are not valid to process.
+
+total 64
+drwxrwxr-x  2 nraghu nraghu  4096 Jan 17 11:51 .
+drwxrwxr-x 46 nraghu nraghu  4096 Jan 15 19:24 ..
+-rw-rw-r--  1 nraghu nraghu 12452 Jan 15 16:40 before_my_code_changes.sh
+-rwxrwxr-x  1 nraghu nraghu   633 Jan 17 11:51 disk_usage-bk.sh
+-rwxrwxr-x  1 nraghu nraghu   633 Jan 16 19:34 disk_usage.sh
+-rw-r--r--  1 nraghu nraghu 12288 Jan 17 11:52 .disk_usage.sh.swp
+-rw-rw-r--  1 nraghu nraghu  1915 Jan 16 19:51 Notes_on_DEVOPS-5270
+
+$ ls -la | awk 'NR>3 {print $1,$2,$3}' 
+
+-rw-rw-r-- 13K before_my_code_changes.sh
+-rwxrwxr-x 633 disk_usage-bk.sh
+-rwxrwxr-x 633 disk_usage.sh
+-rw-r--r-- 12K .disk_usage.sh.swp
+-rw-rw-r-- 1.9K Notes_on_DEVOPS-5270
+-rw-rw-r-- 13K t.sh
+
+--> NR is built-in variable stands for 'Number of Record'
+NR keep track of current line number, NR>3 when current line not greater than 3,awk will not process that line which mean skip first three lines.
+
+
+Usage2: -F  --> field seperator
+
+
+
